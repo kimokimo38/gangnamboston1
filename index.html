@@ -819,6 +819,13 @@
     letter-spacing: 0.12em;
   }
 
+  /* 모바일 CTA 전화번호 축소 (한 줄 표시) */
+    .phone-number {
+      font-size: clamp(1.6rem, 7.5vw, 2.2rem);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+  
   /* === 예약 전화번호 반짝임 효과 === */
   @keyframes goldShine {
     0% { background-position: 200% center; }
