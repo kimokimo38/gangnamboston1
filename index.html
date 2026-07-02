@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -15,17 +16,17 @@
     --deep: #0a0a0f;
     --card: #0f0f18;
     --border: #1e1e2e;
-    --gold: #b8974a;
-    --gold-light: #d4b46a;
-    --gold-dim: rgba(184,151,74,0.15);
+    --gold: #d4af37;
+    --gold-light: #eed06f;
+    --gold-dim: rgba(212,175,55,0.15);
     --text: #eae8e0;
-    --text-dim: #a9a7a0;
+    --text-dim: #c4c2ba;
     --white: #f0ede8;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; font-size: 17px; }
 
   body {
     background: var(--black);
@@ -57,7 +58,7 @@
     justify-content: space-between;
     align-items: center;
     background: linear-gradient(180deg, rgba(5,5,7,0.95) 0%, transparent 100%);
-    border-bottom: 1px solid rgba(184,151,74,0.1);
+    border-bottom: 1px solid rgba(212,175,55,0.1);
   }
 
   .logo {
@@ -108,8 +109,8 @@
     position: absolute;
     inset: 0;
     background:
-      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(184,151,74,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(184,151,74,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(212,175,55,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(212,175,55,0.04) 0%, transparent 60%),
       linear-gradient(180deg, var(--black) 0%, var(--deep) 50%, var(--black) 100%);
   }
 
@@ -118,7 +119,7 @@
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 600px; height: 600px;
-    border: 1px solid rgba(184,151,74,0.06);
+    border: 1px solid rgba(212,175,55,0.06);
     border-radius: 50%;
     animation: pulse 6s ease-in-out infinite;
   }
@@ -126,7 +127,7 @@
   .hero-line:nth-child(2) {
     width: 800px; height: 800px;
     animation-delay: 2s;
-    border-color: rgba(184,151,74,0.04);
+    border-color: rgba(212,175,55,0.04);
   }
 
   .hero-line:nth-child(3) {
@@ -180,9 +181,9 @@
   .hero-sub {
     position: relative;
     margin-top: 32px;
-    font-size: 0.9rem;
-    letter-spacing: 0.2em;
-    color: var(--text-dim);
+    font-size: 1.05rem;
+    letter-spacing: 0.1em;
+    color: #d8d5cc;
     max-width: 400px;
     opacity: 0;
     animation: fadeUp 1s ease forwards 0.9s;
@@ -198,39 +199,43 @@
   }
 
   .btn-gold {
-    padding: 14px 36px;
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
+    padding: 16px 42px;
+    background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+    border: 1px solid var(--gold-light);
+    color: #0a0a0f;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.25em;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
+    box-shadow: 0 0 24px rgba(238,208,111,0.35), 0 4px 14px rgba(0,0,0,0.4);
   }
 
   .btn-gold:hover {
-    background: var(--gold);
-    color: var(--black);
+    background: linear-gradient(180deg, #f6dd8c 0%, var(--gold-light) 100%);
+    box-shadow: 0 0 36px rgba(238,208,111,0.55), 0 6px 18px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
   }
 
   .btn-ghost {
-    padding: 14px 36px;
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--text-dim);
+    padding: 16px 42px;
+    background: rgba(212,175,55,0.08);
+    border: 1px solid var(--gold);
+    color: var(--gold-light);
     font-family: 'Cormorant Garamond', serif;
-    font-size: 0.9rem;
-    letter-spacing: 0.25em;
+    font-size: 1rem;
+    letter-spacing: 0.22em;
     cursor: pointer;
     transition: all 0.3s;
     text-decoration: none;
   }
 
   .btn-ghost:hover {
-    border-color: var(--text-dim);
-    color: var(--text);
+    background: rgba(212,175,55,0.18);
+    border-color: var(--gold-light);
+    color: var(--white);
   }
 
   .scroll-hint {
@@ -418,16 +423,16 @@
   .feature-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 3.5rem;
-    color: rgba(184,151,74,0.1);
+    color: rgba(212,175,55,0.1);
     line-height: 1;
     margin-bottom: 20px;
     transition: color 0.3s;
   }
 
-  .feature-card:hover .feature-num { color: rgba(184,151,74,0.2); }
+  .feature-card:hover .feature-num { color: rgba(212,175,55,0.2); }
 
   .feature-title {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: var(--white);
     letter-spacing: 0.1em;
     margin-bottom: 12px;
@@ -435,7 +440,7 @@
   }
 
   .feature-desc {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--text-dim);
     line-height: 1.8;
   }
@@ -455,11 +460,11 @@
     transition: border-color 0.3s;
   }
 
-  .pkg-card:hover { border-color: rgba(184,151,74,0.3); }
+  .pkg-card:hover { border-color: rgba(212,175,55,0.3); }
 
   .pkg-card.vip {
     background: linear-gradient(135deg, #0f0f18 0%, #14101a 100%);
-    border-color: rgba(184,151,74,0.2);
+    border-color: rgba(212,175,55,0.2);
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -474,7 +479,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.3em;
     color: var(--gold);
-    border: 1px solid rgba(184,151,74,0.3);
+    border: 1px solid rgba(212,175,55,0.3);
     padding: 4px 12px;
     margin-bottom: 20px;
   }
@@ -672,7 +677,7 @@
     transform: translate(-50%, -50%);
     font-family: 'Bebas Neue', sans-serif;
     font-size: 20vw;
-    color: rgba(184,151,74,0.03);
+    color: rgba(212,175,55,0.03);
     white-space: nowrap;
     pointer-events: none;
     letter-spacing: 0.1em;
@@ -802,6 +807,38 @@
 
     footer { flex-direction: column; gap: 16px; text-align: center; }
   }
+
+  /* === 예약 전화번호 반짝임 효과 === */
+  @keyframes goldShine {
+    0% { background-position: 200% center; }
+    100% { background-position: -200% center; }
+  }
+  @keyframes phoneGlow {
+    0%, 100% { filter: drop-shadow(0 0 3px rgba(238,208,111,0.35)); }
+    50% { filter: drop-shadow(0 0 12px rgba(238,208,111,0.9)); }
+  }
+  .phone-shine {
+    display: inline-block;
+    background: linear-gradient(90deg, #d4af37 0%, #fff6cf 25%, #eed06f 50%, #fff6cf 75%, #d4af37 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: goldShine 2.4s linear infinite, phoneGlow 2.4s ease-in-out infinite;
+    transition: filter 0.25s ease;
+  }
+  .phone-shine:hover {
+    background: linear-gradient(90deg, #f4c400 0%, #ffe680 25%, #ffd700 50%, #ffe680 75%, #f4c400 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: goldShine 1.2s linear infinite;
+    filter: drop-shadow(0 0 14px rgba(255,215,0,0.95));
+  }
+  .phone-shine a {
+    color: inherit;
+    text-decoration: none;
+  }
 </style>
 </head>
 <body>
@@ -894,7 +931,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">예약 문의</span>
-            <span class="info-value">010-4102-7789 (천희 사장)</span>
+            <span class="info-value phone-shine"><a href="tel:010-4102-7789">010-4102-7789 (천희 사장)</a></span>
           </div>
           <div class="info-row">
             <span class="info-label">카카오톡</span>
