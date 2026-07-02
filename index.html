@@ -428,7 +428,7 @@
     transition: color 0.3s;
   }
 
-  .feature-card:hover .feature-num { color: rgba(212,175,55,0.2); }
+  .feature-card:hover .feature-num { color: var(--gold); }
 
   .feature-title {
     font-size: 1.1rem;
@@ -805,6 +805,18 @@
     .features-grid { grid-template-columns: 1fr; }
 
     footer { flex-direction: column; gap: 16px; text-align: center; }
+
+    /* 모바일 h2 크기 축소 */
+    .section-title { font-size: clamp(1.8rem, 8vw, 2.4rem); }
+    .cta-band h2 { font-size: clamp(1.2rem, 4.5vw, 1.6rem); }
+    .cta-band h2 em { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+  }
+
+  /* 푸터 전화번호 */
+  .footer-phone {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
   }
 
   /* === 예약 전화번호 반짝임 효과 === */
@@ -849,7 +861,7 @@
     <span>GANGNAM BOSTON</span></h1>
   </a>
   <nav>
-    <a href="#intro"></a>소개</a>
+    <a href="#intro">소개</a>
     <a href="#package">패키지</a>
     <a href="#faq">FAQ</a>
     <a href="#location">오시는 길</a>
@@ -926,7 +938,7 @@
           </div>
           <div class="info-row">
             <span class="info-label">운영 시간</span>
-            <span class="info-value">매일 오후 6시 — 새벽 4시</span>
+            <span class="info-value">365일 24시간</span>
           </div>
           <div class="info-row">
             <span class="info-label">예약 문의</span>
@@ -1152,7 +1164,7 @@
       </div>
       <div class="faq-item">
         <div class="faq-q">영업 시간은 어떻게 되나요?</div>
-        <p class="faq-a">저녁 6시부터 새벽 4시까지 합니다. 늦게 오실 경우 새벽 2시 전에는 오셔야 입장 가능합니다. 공휴일도 쉬지 않고 운영합니다.</p>
+        <p class="faq-a">365일 24시간 운영합니다. 공휴일도 쉬지 않고, 언제든 편하신 시간에 방문하시면 됩니다.</p>
       </div>
     </div>
   </div>
@@ -1193,7 +1205,7 @@
           </div>
           <div class="map-detail">
             <dt>hours</dt>
-            <dd><strong>매일 18:00 — 04:00</strong><br>마지막 입장 02:00</dd>
+            <dd><strong>365일 24시간</strong><br>연중무휴</dd>
           </div>
         </dl>
 
@@ -1218,6 +1230,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">GANGNAM BOSTON</div>
+  <div class="footer-phone phone-shine"><a href="tel:010-4102-7789">010-4102-7789 (천희 사장)</a></div>
   <div class="footer-copy">© 2026 강남보스턴. All rights reserved. | 서울시 강남구 삼성동 143-27</div>
 </footer>
 
